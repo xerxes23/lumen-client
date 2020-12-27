@@ -7,12 +7,20 @@ import { SignUp } from "./signup/SignUp";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-	root: {
+	mainContainer: {
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
 		height: "100vh",
+		width: "100vw",
+		backgroundColor: "#ffebee",
+	},
+	header: {
+		fontWeight: 500,
+	},
+	loginButton: {
+		marginTop: 10,
 	},
 });
 
@@ -20,8 +28,10 @@ export default function Landing() {
 	const classes = useStyles();
 
 	return (
-		<Container className={classes.root}>
-			<Typography variant="h3">Lumenboard</Typography>
+		<div className={classes.mainContainer}>
+			<Typography className={classes.header} variant="h3">
+				Lumenboard
+			</Typography>
 			<Switch>
 				<Route path="/signup">
 					<SignUp />
@@ -31,6 +41,6 @@ export default function Landing() {
 					<Login />
 				</Route>
 			</Switch>
-		</Container>
+		</div>
 	);
 }

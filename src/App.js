@@ -1,12 +1,19 @@
-import "./App.css";
-
 import { Redirect, Route, Switch } from "react-router-dom";
 
 import Landing from "./components/landing/Landing";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+	app: {
+		width: "100vw",
+	},
+});
 
 function App() {
+	const classes = useStyles();
+
 	return (
-		<div className="App">
+		<div className={classes.app}>
 			<Switch>
 				<Route path="/">
 					<Landing />
