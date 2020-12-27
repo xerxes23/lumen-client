@@ -1,18 +1,27 @@
-import { Link, Route, Switch } from "react-router-dom";
+import { Container, Typography } from "@material-ui/core";
+import { Route, Switch } from "react-router-dom";
 
 import { Login } from "./login/Login";
 import React from "react";
 import { SignUp } from "./signup/SignUp";
-import { Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+	root: {
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
+		height: "100vh",
+	},
+});
 
 export default function Landing() {
-	return (
-		<>
-			<Typography variant="h1">Welcome to to Lumenboard</Typography>
-			<Typography variant="h2">
-				This is the place where you find all the anwsers
-			</Typography>
+	const classes = useStyles();
 
+	return (
+		<Container className={classes.root}>
+			<Typography variant="h3">Lumenboard</Typography>
 			<Switch>
 				<Route path="/signup">
 					<SignUp />
@@ -22,6 +31,6 @@ export default function Landing() {
 					<Login />
 				</Route>
 			</Switch>
-		</>
+		</Container>
 	);
 }
