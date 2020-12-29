@@ -1,13 +1,13 @@
-import { Container, Typography } from "@material-ui/core";
 import { Route, Switch } from "react-router-dom";
 
 import { Login } from "./login/Login";
 import React from "react";
 import { SignUp } from "./signup/SignUp";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-	mainContainer: {
+	landingCointainer: {
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
@@ -19,16 +19,13 @@ const useStyles = makeStyles({
 	header: {
 		fontWeight: 500,
 	},
-	loginButton: {
-		marginTop: 10,
-	},
 });
 
 export default function Landing() {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.mainContainer}>
+		<div className={classes.landingCointainer}>
 			<Typography className={classes.header} variant="h3">
 				Lumenboard
 			</Typography>

@@ -1,15 +1,28 @@
-import { Button, TextField } from "@material-ui/core";
+import { Button, FormControl, TextField } from "@material-ui/core";
 import React, { useState } from "react";
 
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles({
-	root: {
+	form: {
 		display: "flex",
 		flexDirection: "column",
+		alignItems: "center",
+		width: 300,
+	},
+	textInput: {
+		marginTop: 20,
+		width: 300,
 	},
 	loginButton: {
-		marginTop: 25,
+		marginTop: 20,
+		borderRadius: 20,
+		width: 200,
+	},
+	signupLink: {
+		textDecoration: "none",
+		margin: "20px auto",
 	},
 });
 
@@ -39,15 +52,15 @@ export function Login() {
 	const classes = useStyles();
 
 	return (
-		<form className={classes.root}>
+		<FormControl className={classes.form}>
 			<TextField
-				id="standard-basic"
+				className={classes.textInput}
 				label="Email"
 				value={email}
 				onChange={handleEmailChange}
 			/>
 			<TextField
-				id="standard-basic"
+				className={classes.textInput}
 				label="Password"
 				type="password"
 				value={password}
@@ -61,6 +74,11 @@ export function Login() {
 			>
 				Login
 			</Button>
-		</form>
+
+			<Link className={classes.signupLink} to="/signup">
+				{" "}
+				Sign Up instead{" "}
+			</Link>
+		</FormControl>
 	);
 }
