@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 
@@ -12,6 +13,8 @@ const useStyles = makeStyles({
 		display: "flex",
 		fontSize: 32,
 		fontWeight: "bolder",
+		textDecoration: "none",
+		color: "black",
 	},
 	navbarLinks: {
 		display: "flex",
@@ -24,7 +27,9 @@ export function Navbar() {
 
 	return (
 		<div className={classes.navbar}>
-			<div className={classes.logo}>Lumenboard</div>
+			<Link to="/dashboard" className={classes.logo}>
+				Lumenboard
+			</Link>
 			<div className={classes.navbarLinks}>
 				<div>Add Question</div>
 				<div>Profile</div>
