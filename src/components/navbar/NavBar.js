@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function NavBar() {
+export function Navbar() {
 	return (
 		<div>
 			<h1>Lumenboard</h1>

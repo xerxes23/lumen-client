@@ -1,5 +1,6 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 
+import { Dashboard } from "./components/dashboard/Dashboard";
 import Landing from "./components/landing/Landing";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -15,8 +16,11 @@ function App() {
 	return (
 		<div className={classes.app}>
 			<Switch>
-				<Route path="/">
+				<Route exact path="/">
 					<Landing />
+				</Route>
+				<Route path="/dashboard">
+					<Dashboard />
 				</Route>
 			</Switch>
 			<Route exact path="/">
