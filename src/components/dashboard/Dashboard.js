@@ -12,7 +12,7 @@ export function Dashboard() {
 				<div>
 					<button>Upvote</button>
 					<button>Downvote</button>
-					<button>share</button>
+					<button>Share</button>
 				</div>
 			</div>
 		</div>
