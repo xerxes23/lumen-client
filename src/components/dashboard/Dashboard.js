@@ -9,6 +9,11 @@ export function Dashboard() {
 			<div>
 				<div>Question: How are you?</div>
 				<div>Answer: I'm good.</div>
+				<div>
+					<button>Upvote</button>
+					<button>Downvote</button>
+					<button>share</button>
+				</div>
 			</div>
 		</div>
 	);
