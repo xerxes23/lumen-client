@@ -2,8 +2,12 @@ import { Navbar } from "../navbar/Navbar";
 import React from "react";
 
 export function Dashboard() {
-	const upvote = () => {
+	const upVote = () => {
 		console.log("Upvoted");
+	};
+
+	const downVote = () => {
+		console.log("Downvoted");
 	};
 	return (
 		<div>
@@ -13,8 +17,8 @@ export function Dashboard() {
 				<div>Question: How are you?</div>
 				<div>Answer: I'm good.</div>
 				<div>
-					<button onClick={upvote}>Upvote</button>
-					<button>Downvote</button>
+					<button onClick={upVote}>Upvote</button>
+					<button onClick={downVote}>Downvote</button>
 					<button>Share</button>
 				</div>
 			</div>
