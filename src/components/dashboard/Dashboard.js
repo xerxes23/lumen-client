@@ -22,6 +22,15 @@ export function Dashboard() {
 					<button>Share</button>
 				</div>
 			</div>
+			<div>
+				<div>Question: How are you?</div>
+				<div>Answer: I'm good.</div>
+				<div>
+					<button onClick={upVote}>Upvote</button>
+					<button onClick={downVote}>Downvote</button>
+					<button>Share</button>
+				</div>
+			</div>
 		</div>
 	);
 }
