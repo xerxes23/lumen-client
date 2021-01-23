@@ -13,6 +13,7 @@ export function Dashboard() {
 		<div>
 			<Navbar />
 			<h1>Dashboard</h1>
+			<input type="text" />
 			<div>
 				<div>Question: How are you?</div>
 				<div>Answer: I'm good.</div>
