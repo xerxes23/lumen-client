@@ -9,6 +9,10 @@ export function Dashboard() {
 	const downVote = () => {
 		console.log("Downvoted");
 	};
+
+	const handleShare = () => {
+		console.log("Shared");
+	};
 	return (
 		<div>
 			<Navbar />
@@ -20,7 +24,7 @@ export function Dashboard() {
 				<div>
 					<button onClick={upVote}>Upvote</button>
 					<button onClick={downVote}>Downvote</button>
-					<button>Share</button>
+					<button onClick={handleShare}>Share</button>
 				</div>
 			</div>
 			<div>
@@ -29,7 +33,7 @@ export function Dashboard() {
 				<div>
 					<button onClick={upVote}>Upvote</button>
 					<button onClick={downVote}>Downvote</button>
-					<button>Share</button>
+					<button onClick={handleShare}>Share</button>
 				</div>
 			</div>
 		</div>
