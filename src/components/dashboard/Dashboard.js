@@ -20,7 +20,7 @@ export function Dashboard() {
 			<input type="text" />
 			<div>
 				<div>Question: How are you?</div>
-				<div>Answer: I'm good.</div>
+				<div>Answer: I'm good. How are you?</div>
 				<div>
 					<button onClick={upVote}>Upvote</button>
 					<button onClick={downVote}>Downvote</button>
